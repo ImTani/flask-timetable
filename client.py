@@ -32,14 +32,6 @@ def add_schedule(initials, classes, day):
 def clear_database():
     requests.post(f'{SERVER_URL}/api/schedule/clear')
 
-clear_database()
-add_schedule("RS", ["6A", "7B", "8C", "9A", "FREE", "5B", "6C", "7D"], "Monday")
-add_schedule("MS", ["5D", "6E", "7F", "8A", "FREE", "9B", "10C", "11D"], "Monday")
-add_schedule("AS", ["5E", "6F", "FREE", "8B", "10A", "9C", "10D", "11E"], "Monday")
-
-add_schedule("RS", ["5D", "6E", "7F", "8A", "FREE", "9B", "10C", "11D"], "Tuesday")
-add_schedule("AS", ["5E", "6F", "FREE", "8B", "10A", "9C", "10D", "11E"], "Tuesday")
-
 app = tk.Tk()
 app.title("Teacher Schedule")
 
