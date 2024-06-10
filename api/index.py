@@ -5,7 +5,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 def connect_db():
-    return sqlite3.connect('./central_schedule.db')
+    return sqlite3.connect('api/central_schedule.db')
 
 @app.route('/api/schedule', methods=['GET'])
 def get_schedule():
