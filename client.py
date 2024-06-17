@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 import requests
 from datetime import datetime
-import json
 
 SERVER_URL = 'https://flask-timetable.vercel.app/'
 
@@ -20,17 +19,6 @@ def display_schedule():
     
     for row in schedule:
         tree.insert("", "end", values=row)
-
-def add_schedule(initials, classes, day):
-    data = {
-        'initials': initials,
-        'classes': classes,
-        'day': day
-    }
-    requests.post(f'{SERVER_URL}/api/schedule', json=data)
-
-def clear_database():
-    requests.post(f'{SERVER_URL}/api/schedule/clear')
 
 app = tk.Tk()
 app.title("Teacher Schedule")
